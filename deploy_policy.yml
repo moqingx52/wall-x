@@ -1,0 +1,26 @@
+# Basic experiment configuration
+policy_name: wallx
+task_name: null
+task_config: null
+ckpt_setting: wallx-zeroshot
+seed: null
+instruction_type: unseen
+policy_conda_env: null
+
+# Wall-X serving runtime configuration
+wallx_server_uri: ws://127.0.0.1:8000
+wallx_connect_timeout_s: 60
+wallx_request_timeout_s: 60
+wallx_dataset_names: x2_normal
+
+# Action/state adapter configuration
+wallx_action_dim: 14
+wallx_state_dim: 14
+wallx_exec_horizon: 4
+wallx_action_scale: 1.0
+wallx_strict_action_dim: true
+
+# Camera key mapping (must match launch_serving --model-config.camera-key)
+wallx_camera_key_head: face_view
+wallx_camera_key_left: left_wrist_view
+wallx_camera_key_right: right_wrist_view
